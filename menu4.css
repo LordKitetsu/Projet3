@@ -1,0 +1,25 @@
+body {
+    background-color: #fdfffd;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+em {
+    font-weight: bold;
+}
+
+.element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section {
+    max-width: 1440px;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
