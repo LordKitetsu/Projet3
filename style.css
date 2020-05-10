@@ -1,0 +1,111 @@
+@charset "UTF-8";
+.la_note_enchantée {
+  margin: auto;
+  max-width: 1440px;
+}
+
+.la_note_enchantée h1, .la_note_enchantée h2, .la_note_enchantée h3 {
+  text-align: center;
+}
+
+.la_note_enchantée h2 {
+  font-family: "Segoe Script", cursive;
+}
+
+.la_note_enchantée .bas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.la_note_enchantée .logo1 {
+  width: 50px;
+  height: 50px;
+}
+
+.la_note_enchantée .logo {
+  display: block;
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.la_note_enchantée table, .la_note_enchantée h3 {
+  margin: auto;
+  font-family: "Segoe Print";
+  font-size: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 750px;
+}
+
+.la_note_enchantée .menu {
+  background-color: #fcdfdb;
+  -webkit-box-shadow: 6px 6px 6px grey;
+          box-shadow: 6px 6px 6px grey;
+  max-width: 720px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.la_note_enchantée .prix {
+  font-weight: bold;
+  text-align: right;
+}
+
+body {
+  margin: 0;
+}
+
+header, footer {
+  background-color: #579c87;
+  color: #fdcb46;
+  font-family: "Montserrat";
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  font-size: 25px;
+}
+
+.mention {
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.Contact {
+  padding-right: 15px;
+  padding-top: 5px;
+}
+
+header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  height: 100px;
+  padding-top: 20px;
+}
+/*# sourceMappingURL=style.css.map */

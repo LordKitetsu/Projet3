@@ -1,0 +1,39 @@
+@import "./utils/variables";
+@import "./layouts/menu";
+
+body {
+    margin: 0;
+}
+
+header, footer {
+    background-color: #579c87;
+    color: #fdcb46;
+    font-family: "Montserrat";
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    font-size: 25px;
+}
+
+.mention { 
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.Contact {
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    height: 100px;
+    padding-top: 20px;
+    
+}

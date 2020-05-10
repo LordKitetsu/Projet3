@@ -1,0 +1,61 @@
+.la_note_enchantée {
+    margin: auto;
+    max-width: 1440px;
+    
+    h1, h2, h3 {
+    text-align: center;
+    }
+
+    h2 {
+    font-family: "Segoe Script", cursive;
+    }
+    
+
+    
+
+
+    .bas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .logo1 {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo {
+        display: block;
+        margin: auto;
+        width: 75px;
+        height: 75px;
+        justify-content: center;
+    }
+
+    table, h3 {
+        margin: auto;
+        font-family: "Segoe Print";
+        font-size: 10px;
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: center;
+        max-width: 750px;
+        
+    }
+
+    .menu {
+        background-color: #fcdfdb;
+        
+        box-shadow: 6px 6px 6px grey;
+        max-width: 720px;
+        margin: auto;
+        margin-bottom: 50px;
+
+    }
+
+    .prix {
+        font-weight: bold;
+        text-align: right;
+    }
+}

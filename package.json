@@ -1,0 +1,19 @@
+{
+  "name": "projet3",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./Projet3/style.scss:./Projet3/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordKitetsu/Projet3.git"
+  },
+  "author": "Patchane-Lacane Kévin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LordKitetsu/Projet3/issues"
+  },
+  "homepage": "https://github.com/LordKitetsu/Projet3#readme"
+}
