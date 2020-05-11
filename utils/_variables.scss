@@ -1,2 +1,14 @@
 $color-primary: #579c87;
 $color-text-primary: #fdcb46;
+$menu1-background-color: #fcdfdb;
+$menu1-text-color: black;
+$menu2-background-color: #fff5fe;
+$menu2-text-color: #c77412;
+$menu3-background-color: #f9f9f9;
+$menu3-text-color: #0887fb;
+$menu4-background-color: #fdfffd;
+$menu4-text-color: #72bf56;
+
+@mixin box-shadow-menu {
+    box-shadow: 6px 6px 6px lightgrey;
+}

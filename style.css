@@ -54,8 +54,8 @@
 
 .la_note_enchantée .menu {
   background-color: #fcdfdb;
-  -webkit-box-shadow: 6px 6px 6px grey;
-          box-shadow: 6px 6px 6px grey;
+  -webkit-box-shadow: 6px 6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey;
   max-width: 720px;
   margin: auto;
   margin-bottom: 50px;
@@ -70,7 +70,7 @@ body {
   margin: 0;
 }
 
-header, footer {
+header, footer, .prochainement {
   background-color: #579c87;
   color: #fdcb46;
   font-family: "Montserrat";
@@ -89,6 +89,8 @@ footer {
           justify-content: space-between;
   height: 50px;
   font-size: 25px;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .mention {
@@ -107,5 +109,109 @@ header {
   font-size: 50px;
   height: 100px;
   padding-top: 20px;
+}
+
+.menus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1024px;
+  margin: auto;
+}
+
+article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 500px;
+}
+
+article.menu1 {
+  -webkit-box-shadow: 6px 6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey;
+  color: black;
+  background-color: #fcdfdb;
+  font-family: "Segoe Script", cursive;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+article.menu1 img {
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 50px;
+  height: 50px;
+}
+
+article.menu1 span {
+  font-family: "Segoe Print";
+}
+
+article.menu2 {
+  -webkit-box-shadow: 6px 6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey;
+  color: #c77412;
+  background-color: #fff5fe;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+article.menu3 {
+  -webkit-box-shadow: 6px 6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey;
+  color: #0887fb;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+article.menu3 span {
+  font-family: "Segoe Print";
+}
+
+article.menu4 {
+  -webkit-box-shadow: 6px 6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey;
+  color: #72bf56;
+  background-color: #fdfffd;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+article.menu4 span {
+  font-family: "Segoe Print";
+}
+
+.prochainement {
+  width: 400px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 10px;
+  margin: auto;
+  margin-bottom: 50px;
 }
 /*# sourceMappingURL=style.css.map */

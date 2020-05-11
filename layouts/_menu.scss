@@ -45,9 +45,8 @@
     }
 
     .menu {
-        background-color: #fcdfdb;
-        
-        box-shadow: 6px 6px 6px grey;
+        background-color: #fcdfdb;        
+        @include box-shadow-menu;
         max-width: 720px;
         margin: auto;
         margin-bottom: 50px;
