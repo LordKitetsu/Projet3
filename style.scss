@@ -2,13 +2,18 @@
 @import "./layouts/menu";
 
 body {
-    margin: 0;
+    margin: auto;
 }
 
 header, footer, .prochainement {
     background-color: #579c87;
     color: #fdcb46;
     font-family: "Montserrat";
+}
+
+a {
+    text-decoration: none;
+    color: $color-text-primary;
 }
 
 footer {

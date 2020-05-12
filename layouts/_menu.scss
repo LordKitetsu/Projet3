@@ -1,18 +1,86 @@
-.la_note_enchantée {
+body {
     margin: auto;
     max-width: 1440px;
-    
-    h1, h2, h3 {
+}
+
+.menu {        
+    @include box-shadow-menu;
+    max-width: 720px;
+    margin: auto;
+    margin-bottom: 50px;
+
+}
+
+
+
+h1, h2, h3 {
     text-align: center;
     }
 
+table, h3 {
+    margin: auto;
+    font-size: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+    width: 550px;
+    margin-bottom: 20px;
+        
+}
+
+h2 {
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+td {
+    padding-bottom: 5px;
+}
+
+table {
+    width: 450px;
+}
+
+.prix {
+    font-weight: bold;
+    text-align: right;
+}
+
+.divider {
+    display: flex;
+    
+    &:before,
+    &:after {
+      content: "";
+      flex: 1;
+    }
+  }
+
+.line {
+    align-items: center;
+    margin: auto;
+    width: 60%;
+    
+    &:before,
+    &:after {
+      height: 1px;
+      margin: 0 1em;
+    }
+  }
+  
+  
+    .one-line {
+      &:before,
+      &:after {
+        background: black;
+      }
+    }
+
+.la_note_enchantée {
+    
     h2 {
     font-family: "Segoe Script", cursive;
     }
-    
-
-    
-
 
     .bas {
         display: flex;
@@ -34,27 +102,74 @@
     }
 
     table, h3 {
-        margin: auto;
-        font-family: "Segoe Print";
-        font-size: 10px;
-        padding-left: 5%;
-        padding-right: 5%;
-        justify-content: center;
-        max-width: 750px;
-        
+        font-family: "Segoe Print";        
     }
 
     .menu {
-        background-color: #fcdfdb;        
-        @include box-shadow-menu;
-        max-width: 720px;
-        margin: auto;
-        margin-bottom: 50px;
+        background-color: $menu1-background-color;        
+    }
+}
 
+.le_chic {
+    .menu {
+        background-color: $menu2-background-color;
     }
 
-    .prix {
-        font-weight: bold;
-        text-align: right;
+    table, h3 {
+        font-family: "Arial", cursive, serif;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-family: "Arial", sans-serif;
+        background: -webkit-linear-gradient(360deg, $entree-menu2-color, $plat-menu2-color, $dessert-menu2-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    
+    .entrée {
+        color: $entree-menu2-color;
+    }
+    .plat {
+        color: $plat-menu2-color;
+    }
+    .dessert {
+        color: $dessert-menu2-color;
+    }
+}
+
+.le_délice {
+    .menu {
+        background-color: $menu3-background-color;
+    }
+
+    h2 {
+        background: linear-gradient(360deg, $menu3-titre-primary, $menu3-titre-secondary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    table, h3, h2 {
+        font-family: "Segoe Print", cursive;
+    }
+}
+
+.la_palette {
+    .menu {
+        background-color: $menu4-background-color;
+    }
+
+    h2 {
+        background: linear-gradient(360deg, $menu4-titre-primary, $menu4-titre-secondary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    table, h3, h2 {
+        font-family: "Segoe Print", cursive, sans-serif;
     }
 }

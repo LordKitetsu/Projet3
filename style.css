@@ -1,11 +1,79 @@
 @charset "UTF-8";
-.la_note_enchantée {
+body {
   margin: auto;
   max-width: 1440px;
 }
 
-.la_note_enchantée h1, .la_note_enchantée h2, .la_note_enchantée h3 {
+.menu {
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+  max-width: 720px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+h1, h2, h3 {
   text-align: center;
+}
+
+table, h3 {
+  margin: auto;
+  font-size: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 550px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+td {
+  padding-bottom: 5px;
+}
+
+table {
+  width: 450px;
+}
+
+.prix {
+  font-weight: bold;
+  text-align: right;
+}
+
+.divider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.divider:before, .divider:after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.line {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 60%;
+}
+
+.line:before, .line:after {
+  height: 1px;
+  margin: 0 1em;
+}
+
+.one-line:before, .one-line:after {
+  background: black;
 }
 
 .la_note_enchantée h2 {
@@ -41,39 +109,87 @@
 }
 
 .la_note_enchantée table, .la_note_enchantée h3 {
-  margin: auto;
   font-family: "Segoe Print";
-  font-size: 10px;
-  padding-left: 5%;
-  padding-right: 5%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 750px;
 }
 
 .la_note_enchantée .menu {
   background-color: #fcdfdb;
-  -webkit-box-shadow: 6px 6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey;
-  max-width: 720px;
-  margin: auto;
-  margin-bottom: 50px;
 }
 
-.la_note_enchantée .prix {
-  font-weight: bold;
-  text-align: right;
+.le_chic .menu {
+  background-color: #fff5fe;
+}
+
+.le_chic table, .le_chic h3 {
+  font-family: "Arial", cursive, serif;
+  font-size: 15px;
+}
+
+.le_chic h2 {
+  font-family: "Arial", sans-serif;
+  background: -webkit-linear-gradient(360deg, #c67412, #a56799, #6e4ccc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.le_chic .entrée {
+  color: #c67412;
+}
+
+.le_chic .plat {
+  color: #a56799;
+}
+
+.le_chic .dessert {
+  color: #6e4ccc;
+}
+
+.le_délice .menu {
+  background-color: #f9f9f9;
+}
+
+.le_délice h2 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0887fb), to(#89c2f7));
+  background: linear-gradient(360deg, #0887fb, #89c2f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.le_délice table, .le_délice h3, .le_délice h2 {
+  font-family: "Segoe Print", cursive;
+}
+
+.la_palette .menu {
+  background-color: #fdfffd;
+}
+
+.la_palette h2 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#72bf56), to(#c1f5af));
+  background: linear-gradient(360deg, #72bf56, #c1f5af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.la_palette table, .la_palette h3, .la_palette h2 {
+  font-family: "Segoe Print", cursive, sans-serif;
 }
 
 body {
-  margin: 0;
+  margin: auto;
 }
 
 header, footer, .prochainement {
   background-color: #579c87;
   color: #fdcb46;
   font-family: "Montserrat";
+}
+
+a {
+  text-decoration: none;
+  color: #fdcb46;
 }
 
 footer {
@@ -148,8 +264,8 @@ article {
 }
 
 article.menu1 {
-  -webkit-box-shadow: 6px 6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey;
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: black;
   background-color: #fcdfdb;
   font-family: "Segoe Script", cursive;
@@ -170,8 +286,8 @@ article.menu1 span {
 }
 
 article.menu2 {
-  -webkit-box-shadow: 6px 6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey;
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #c77412;
   background-color: #fff5fe;
   font-weight: bold;
@@ -179,8 +295,8 @@ article.menu2 {
 }
 
 article.menu3 {
-  -webkit-box-shadow: 6px 6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey;
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #0887fb;
   background-color: #f9f9f9;
   font-weight: bold;
@@ -192,8 +308,8 @@ article.menu3 span {
 }
 
 article.menu4 {
-  -webkit-box-shadow: 6px 6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey;
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #72bf56;
   background-color: #fdfffd;
   font-weight: bold;
