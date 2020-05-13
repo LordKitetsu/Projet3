@@ -1,4 +1,97 @@
 @charset "UTF-8";
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@keyframes wiggle {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
 body {
   margin: auto;
   max-width: 1440px;
@@ -64,7 +157,7 @@ table {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  width: 60%;
+  width: 54.5%;
 }
 
 .line:before, .line:after {
@@ -74,6 +167,18 @@ table {
 
 .one-line:before, .one-line:after {
   background: black;
+}
+
+.underline {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(5%, black), color-stop(5.01%, transparent)) no-repeat;
+  background: linear-gradient(to top, black 0%, black 5%, transparent 5.01%) no-repeat;
+  background-size: 0 100%;
+  -webkit-transition: background-size 300ms;
+  transition: background-size 300ms;
+}
+
+.underline:hover {
+  background-size: 100% 100%;
 }
 
 .la_note_enchantée h2 {
@@ -116,6 +221,10 @@ table {
   background-color: #fcdfdb;
 }
 
+.le_chic .line {
+  width: 55.5%;
+}
+
 .le_chic .menu {
   background-color: #fff5fe;
 }
@@ -127,14 +236,14 @@ table {
 
 .le_chic h2 {
   font-family: "Arial", sans-serif;
-  background: -webkit-linear-gradient(360deg, #c67412, #a56799, #6e4ccc);
+  background: -webkit-linear-gradient(45deg, #c77412 0%, #a56799 50%, #6e4ccc 70%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .le_chic .entrée {
-  color: #c67412;
+  color: #c77412;
 }
 
 .le_chic .plat {
@@ -150,8 +259,7 @@ table {
 }
 
 .le_délice h2 {
-  background: -webkit-gradient(linear, left bottom, left top, from(#0887fb), to(#89c2f7));
-  background: linear-gradient(360deg, #0887fb, #89c2f7);
+  background: -webkit-linear-gradient(0deg, #0887fb 0%, #c2dcf5 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -166,8 +274,7 @@ table {
 }
 
 .la_palette h2 {
-  background: -webkit-gradient(linear, left bottom, left top, from(#72bf56), to(#c1f5af));
-  background: linear-gradient(360deg, #72bf56, #c1f5af);
+  background: -webkit-linear-gradient(0deg, #72bf56 0%, #ddf5d4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -205,8 +312,6 @@ footer {
           justify-content: space-between;
   height: 50px;
   font-size: 25px;
-  position: -webkit-sticky;
-  position: sticky;
 }
 
 .mention {
@@ -217,6 +322,13 @@ footer {
 .Contact {
   padding-right: 15px;
   padding-top: 5px;
+}
+
+.Contact:hover, .mention:hover {
+  -webkit-animation-name: wiggle;
+          animation-name: wiggle;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
 }
 
 header {
@@ -242,6 +354,10 @@ header {
           justify-content: space-between;
   width: 1024px;
   margin: auto;
+}
+
+h1 {
+  font-size: 30px;
 }
 
 article {
@@ -281,7 +397,7 @@ article.menu1 img {
   height: 50px;
 }
 
-article.menu1 span {
+article.menu1 p {
   font-family: "Segoe Print";
 }
 
@@ -294,6 +410,14 @@ article.menu2 {
   font-size: 30px;
 }
 
+article.menu2 h1 {
+  font-family: "Arial";
+  background: -webkit-linear-gradient(45deg, #c77412 0%, #a56799 50%, #6e4ccc 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 article.menu3 {
   -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
@@ -303,8 +427,15 @@ article.menu3 {
   font-size: 30px;
 }
 
-article.menu3 span {
+article.menu3 p {
   font-family: "Segoe Print";
+}
+
+article.menu3 h1 {
+  background: -webkit-linear-gradient(0deg, #0887fb 0%, #c2dcf5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 article.menu4 {
@@ -316,8 +447,15 @@ article.menu4 {
   font-size: 30px;
 }
 
-article.menu4 span {
+article.menu4 p {
   font-family: "Segoe Print";
+}
+
+article.menu4 h1 {
+  background: -webkit-linear-gradient(0deg, #72bf56 0%, #ddf5d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .prochainement {
@@ -329,5 +467,21 @@ article.menu4 span {
   padding-top: 10px;
   margin: auto;
   margin-bottom: 50px;
+}
+
+.zoom {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.zoom:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0.65;
 }
 /*# sourceMappingURL=style.css.map */

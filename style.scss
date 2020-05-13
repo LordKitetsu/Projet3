@@ -22,7 +22,6 @@ footer {
     justify-content: space-between;
     height: 50px;
     font-size: 25px;
-    position: sticky;
 }
 
 .mention { 
@@ -35,13 +34,19 @@ footer {
     padding-top: 5px;
 }
 
+.Contact, .mention {
+    &:hover {
+        animation-name: wiggle;
+        animation-duration: 500ms;
+    }
+}
+
 header {
     text-align: center;
     font-weight: bold;
     font-size: 50px;
     height: 100px;
-    padding-top: 20px;
-    
+    padding-top: 20px;    
 }
 
 .menus {
@@ -51,6 +56,10 @@ header {
     justify-content: space-between;
     width: 1024px;
     margin: auto;
+}
+
+h1 {
+    font-size: 30px;
 }
 
 article {
@@ -77,7 +86,7 @@ article {
         font-family: "Segoe Script", cursive;
         font-weight: bold;
         font-size: 30px;
-        span {
+        p {
             font-family: "Segoe Print";
         }
     }
@@ -87,6 +96,10 @@ article {
         background-color: $menu2-background-color;
         font-weight: bold;
         font-size: 30px;
+        h1 {
+            font-family: "Arial";
+            @include dégradé-menu2;
+        }
     }
     &.menu3 {
         @include box-shadow-menu;
@@ -94,8 +107,11 @@ article {
         background-color: $menu3-background-color;
         font-weight: bold;
         font-size: 30px;
-        span {
+        p {
             font-family: "Segoe Print";
+        }
+        h1 {
+            @include dégradé-menu3;
         }
     }
     &.menu4 {
@@ -104,8 +120,11 @@ article {
         background-color: $menu4-background-color;
         font-weight: bold;
         font-size: 30px;
-        span {
+        p {
             font-family: "Segoe Print";
+        }
+        h1 {
+            @include dégradé-menu4;
         }
     }
 }
@@ -119,4 +138,14 @@ article {
     padding-top: 10px;
     margin: auto;
     margin-bottom: 50px;
+}
+
+.zoom {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 400ms;
+    &:hover {
+        transform: scale(1.2);
+        opacity: 0.65;
+    }
 }

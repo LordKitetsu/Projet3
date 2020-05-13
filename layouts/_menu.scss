@@ -59,7 +59,7 @@ table {
 .line {
     align-items: center;
     margin: auto;
-    width: 60%;
+    width: 54.5%;
     
     &:before,
     &:after {
@@ -75,6 +75,10 @@ table {
         background: black;
       }
     }
+
+.underline {
+    @include underline(black);
+}
 
 .la_note_enchantée {
     
@@ -111,6 +115,9 @@ table {
 }
 
 .le_chic {
+    .line {
+        width: 55.5%;
+    }
     .menu {
         background-color: $menu2-background-color;
     }
@@ -122,12 +129,8 @@ table {
 
     h2 {
         font-family: "Arial", sans-serif;
-        background: -webkit-linear-gradient(360deg, $entree-menu2-color, $plat-menu2-color, $dessert-menu2-color);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include dégradé-menu2;
     }
-
     
     .entrée {
         color: $entree-menu2-color;
@@ -146,15 +149,13 @@ table {
     }
 
     h2 {
-        background: linear-gradient(360deg, $menu3-titre-primary, $menu3-titre-secondary);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include dégradé-menu3;
     }
 
     table, h3, h2 {
         font-family: "Segoe Print", cursive;
     }
+    
 }
 
 .la_palette {
@@ -163,10 +164,7 @@ table {
     }
 
     h2 {
-        background: linear-gradient(360deg, $menu4-titre-primary, $menu4-titre-secondary);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include dégradé-menu4;
     }
 
     table, h3, h2 {
