@@ -60,12 +60,10 @@ header {
 }
 
 .menus {
-    display: flex;
-    flex-flow: row wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 1024px;
-    margin: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "menu1 menu2"
+                         "menu3 menu4"
 }
 
 h1 {
@@ -83,6 +81,7 @@ article {
     width: 400px;
     height: 500px;
     &.menu1 {
+        grid-area: menu1;
         img {
             margin: auto;
             margin-bottom: 0;
@@ -101,6 +100,7 @@ article {
         }
     }
     &.menu2 {
+        grid-area: menu2;
         @include box-shadow-menu;
         color: $menu2-text-color;
         background-color: $menu2-background-color;
@@ -112,6 +112,7 @@ article {
         }
     }
     &.menu3 {
+        grid-area: menu3;
         @include box-shadow-menu;
         color: $menu3-text-color;
         background-color: $menu3-background-color;
@@ -126,6 +127,7 @@ article {
         }
     }
     &.menu4 {
+        grid-area: menu4;
         @include box-shadow-menu;
         color: $menu4-text-color;
         background-color: $menu4-background-color;
@@ -178,4 +180,16 @@ article {
         transform: scale(1.2);
         opacity: 0.50;
     }
+}
+
+@media all and (max-width: 1024px) {
+    .menus {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "menu1" 
+                             "menu2"
+                             "menu3"
+                             "menu4"
+    }
+    
 }

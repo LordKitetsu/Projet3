@@ -376,20 +376,11 @@ header {
 }
 
 .menus {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 1024px;
-  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+      grid-template-areas: "menu1 menu2" "menu3 menu4";
 }
 
 h1 {
@@ -416,6 +407,9 @@ article {
 }
 
 article.menu1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: menu1;
   -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: black;
@@ -438,6 +432,9 @@ article.menu1 p {
 }
 
 article.menu2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: menu2;
   -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #c77412;
@@ -455,6 +452,9 @@ article.menu2 h1 {
 }
 
 article.menu3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: menu3;
   -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #0887fb;
@@ -476,6 +476,9 @@ article.menu3 h1 {
 }
 
 article.menu4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: menu4;
   -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #72bf56;
@@ -546,5 +549,15 @@ article.menu4 h1 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   opacity: 0.50;
+}
+
+@media all and (max-width: 1024px) {
+  .menus {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+        grid-template-areas: "menu1"  "menu2" "menu3" "menu4";
+  }
 }
 /*# sourceMappingURL=style.css.map */
