@@ -81,7 +81,7 @@ article {
     width: 400px;
     height: 500px;
     &.menu1 {
-        grid-area: menu1;
+        grid-area: "menu1";
         img {
             margin: auto;
             margin-bottom: 0;
@@ -100,7 +100,7 @@ article {
         }
     }
     &.menu2 {
-        grid-area: menu2;
+        grid-area: "menu2";
         @include box-shadow-menu;
         color: $menu2-text-color;
         background-color: $menu2-background-color;
@@ -112,7 +112,7 @@ article {
         }
     }
     &.menu3 {
-        grid-area: menu3;
+        grid-area: "menu3";
         @include box-shadow-menu;
         color: $menu3-text-color;
         background-color: $menu3-background-color;
@@ -127,7 +127,7 @@ article {
         }
     }
     &.menu4 {
-        grid-area: menu4;
+        grid-area: "menu4";
         @include box-shadow-menu;
         color: $menu4-text-color;
         background-color: $menu4-background-color;
