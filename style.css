@@ -92,6 +92,30 @@
   }
 }
 
+@-webkit-keyframes suspension {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes suspension {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 body {
   margin: auto;
   max-width: 1440px;
@@ -263,9 +287,10 @@ table {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: 'IM Fell Double Pica', serif;
 }
 
-.le_délice table, .le_délice h3, .le_délice h2 {
+.le_délice table, .le_délice h3 {
   font-family: "Segoe Print", cursive;
 }
 
@@ -278,9 +303,10 @@ table {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: 'Courgette', cursive;
 }
 
-.la_palette table, .la_palette h3, .la_palette h2 {
+.la_palette table, .la_palette h3 {
   font-family: "Segoe Print", cursive, sans-serif;
 }
 
@@ -312,6 +338,16 @@ footer {
           justify-content: space-between;
   height: 50px;
   font-size: 25px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+header {
+  left: 0;
+  top: 0;
+  right: 0;
 }
 
 .mention {
@@ -425,6 +461,7 @@ article.menu3 {
   background-color: #f9f9f9;
   font-weight: bold;
   font-size: 30px;
+  font-family: 'IM Fell Double Pica', serif;
 }
 
 article.menu3 p {
@@ -445,6 +482,7 @@ article.menu4 {
   background-color: #fdfffd;
   font-weight: bold;
   font-size: 30px;
+  font-family: 'Courgette', cursive;
 }
 
 article.menu4 p {
@@ -458,15 +496,40 @@ article.menu4 h1 {
   -webkit-text-fill-color: transparent;
 }
 
+.premier, .deuxieme, .troisieme {
+  opacity: 0;
+}
+
 .prochainement {
   width: 400px;
   height: 50px;
-  font-size: 25px;
+  font-size: 30px;
   border-radius: 10px;
   text-align: center;
   padding-top: 10px;
   margin: auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+}
+
+.prochainement .premier, .prochainement .deuxieme, .prochainement .troisieme {
+  -webkit-animation-name: suspension;
+          animation-name: suspension;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.prochainement .deuxieme {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.prochainement .troisieme {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
 }
 
 .zoom {
@@ -482,6 +545,6 @@ article.menu4 h1 {
 .zoom:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  opacity: 0.65;
+  opacity: 0.50;
 }
 /*# sourceMappingURL=style.css.map */

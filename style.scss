@@ -22,7 +22,17 @@ footer {
     justify-content: space-between;
     height: 50px;
     font-size: 25px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
+header {
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
 
 .mention { 
     padding-left: 15px;
@@ -46,7 +56,7 @@ header {
     font-weight: bold;
     font-size: 50px;
     height: 100px;
-    padding-top: 20px;    
+    padding-top: 20px;   
 }
 
 .menus {
@@ -107,6 +117,7 @@ article {
         background-color: $menu3-background-color;
         font-weight: bold;
         font-size: 30px;
+        font-family: 'IM Fell Double Pica', serif;
         p {
             font-family: "Segoe Print";
         }
@@ -120,6 +131,7 @@ article {
         background-color: $menu4-background-color;
         font-weight: bold;
         font-size: 30px;
+        font-family: 'Courgette', cursive;
         p {
             font-family: "Segoe Print";
         }
@@ -128,17 +140,35 @@ article {
         }
     }
 }
+.premier, .deuxieme, .troisieme {
+    opacity: 0;
+}
 
 .prochainement {
     width: 400px;
     height: 50px;
-    font-size: 25px;
+    font-size: 30px;
     border-radius: 10px;
     text-align: center;
     padding-top: 10px;
     margin: auto;
-    margin-bottom: 50px;
-}
+    margin-bottom: 100px;
+    .premier, .deuxieme, .troisieme {
+        animation-name: suspension;
+        animation-duration: 1.4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        }
+        
+    .deuxieme {
+        animation-delay: .2s;
+    }
+        
+    .troisieme {
+        animation-delay: .4s;
+        }
+    }
+
 
 .zoom {
     opacity: 1;
@@ -146,6 +176,6 @@ article {
     transition: transform 400ms;
     &:hover {
         transform: scale(1.2);
-        opacity: 0.65;
+        opacity: 0.50;
     }
 }

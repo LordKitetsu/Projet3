@@ -150,9 +150,10 @@ table {
 
     h2 {
         @include dégradé-menu3;
+        font-family: 'IM Fell Double Pica', serif;
     }
 
-    table, h3, h2 {
+    table, h3 {
         font-family: "Segoe Print", cursive;
     }
     
@@ -165,9 +166,10 @@ table {
 
     h2 {
         @include dégradé-menu4;
+        font-family: 'Courgette', cursive;
     }
 
-    table, h3, h2 {
+    table, h3 {
         font-family: "Segoe Print", cursive, sans-serif;
     }
 }
