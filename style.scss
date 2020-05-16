@@ -2,10 +2,12 @@
 @import "./layouts/menu";
 
 body {
-    margin: auto;
+    margin: 0;
 }
 
-header, footer, .prochainement {
+header,
+footer,
+.prochainement {
     background-color: #579c87;
     color: #fdcb46;
     font-family: "Montserrat";
@@ -27,14 +29,8 @@ footer {
     bottom: 0;
     right: 0;
 }
-header {
-    left: 0;
-    top: 0;
-    right: 0;
-}
 
-
-.mention { 
+.mention {
     padding-left: 15px;
     padding-top: 5px;
 }
@@ -44,7 +40,8 @@ header {
     padding-top: 5px;
 }
 
-.Contact, .mention {
+.Contact,
+.mention {
     &:hover {
         animation-name: wiggle;
         animation-duration: 500ms;
@@ -56,14 +53,16 @@ header {
     font-weight: bold;
     font-size: 50px;
     height: 100px;
-    padding-top: 20px;   
+    padding-top: 20px;
+    margin: 0;
 }
 
 .menus {
     display: grid;
     grid-template-columns: auto;
-    grid-template-areas: "menu1 menu2"
-                         "menu3 menu4"
+    grid-template-areas:
+        "menu1 menu2"
+        "menu3 menu4";
 }
 
 h1 {
@@ -81,11 +80,11 @@ article {
     width: 400px;
     height: 500px;
     &.menu1 {
-        grid-area: "menu1";
+        grid-area: menu1;
         img {
             margin: auto;
             margin-bottom: 0;
-            margin-top: 0;;
+            margin-top: 0;
             width: 50px;
             height: 50px;
         }
@@ -100,7 +99,7 @@ article {
         }
     }
     &.menu2 {
-        grid-area: "menu2";
+        grid-area: menu2;
         @include box-shadow-menu;
         color: $menu2-text-color;
         background-color: $menu2-background-color;
@@ -112,13 +111,13 @@ article {
         }
     }
     &.menu3 {
-        grid-area: "menu3";
+        grid-area: menu3;
         @include box-shadow-menu;
         color: $menu3-text-color;
         background-color: $menu3-background-color;
         font-weight: bold;
         font-size: 30px;
-        font-family: 'IM Fell Double Pica', serif;
+        font-family: "IM Fell Double Pica", serif;
         p {
             font-family: "Segoe Print";
         }
@@ -127,13 +126,13 @@ article {
         }
     }
     &.menu4 {
-        grid-area: "menu4";
+        grid-area: menu4;
         @include box-shadow-menu;
         color: $menu4-text-color;
         background-color: $menu4-background-color;
         font-weight: bold;
         font-size: 30px;
-        font-family: 'Courgette', cursive;
+        font-family: "Courgette", cursive;
         p {
             font-family: "Segoe Print";
         }
@@ -142,7 +141,9 @@ article {
         }
     }
 }
-.premier, .deuxieme, .troisieme {
+.premier,
+.deuxieme,
+.troisieme {
     opacity: 0;
 }
 
@@ -155,22 +156,23 @@ article {
     padding-top: 10px;
     margin: auto;
     margin-bottom: 100px;
-    .premier, .deuxieme, .troisieme {
+    .premier,
+    .deuxieme,
+    .troisieme {
         animation-name: suspension;
         animation-duration: 1.4s;
         animation-iteration-count: infinite;
         animation-fill-mode: both;
-        }
-        
-    .deuxieme {
-        animation-delay: .2s;
-    }
-        
-    .troisieme {
-        animation-delay: .4s;
-        }
     }
 
+    .deuxieme {
+        animation-delay: 0.2s;
+    }
+
+    .troisieme {
+        animation-delay: 0.4s;
+    }
+}
 
 .zoom {
     opacity: 1;
@@ -178,7 +180,7 @@ article {
     transition: transform 400ms;
     &:hover {
         transform: scale(1.2);
-        opacity: 0.50;
+        opacity: 0.5;
     }
 }
 
@@ -186,10 +188,23 @@ article {
     .menus {
         display: grid;
         grid-template-columns: auto;
-        grid-template-areas: "menu1" 
-                             "menu2"
-                             "menu3"
-                             "menu4"
+        grid-template-areas:
+            "menu1"
+            "menu2"
+            "menu3"
+            "menu4";
+    }
+}
+
+@media all and (max-width: 540px) {
+    article {
+        max-width: 400px;
+    }
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right: 0;
     }
     
 }

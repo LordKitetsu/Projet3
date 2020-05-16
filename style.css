@@ -116,24 +116,23 @@
   }
 }
 
-body {
-  margin: auto;
-  max-width: 1440px;
-}
-
 .menu {
-  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
-  max-width: 720px;
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+  max-width: 500px;
   margin: auto;
   margin-bottom: 50px;
+  padding-top: 25px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
-table, h3 {
+table,
+h3 {
   margin: auto;
   font-size: 10px;
   padding-left: 5%;
@@ -181,7 +180,7 @@ table {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  width: 54.5%;
+  width: auto;
 }
 
 .line:before, .line:after {
@@ -207,6 +206,7 @@ table {
 
 .la_note_enchantée h2 {
   font-family: "Segoe Script", cursive;
+  margin-top: 5px;
 }
 
 .la_note_enchantée .bas {
@@ -220,6 +220,10 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 25px;
 }
 
 .la_note_enchantée .logo1 {
@@ -235,9 +239,11 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: auto;
 }
 
-.la_note_enchantée table, .la_note_enchantée h3 {
+.la_note_enchantée table,
+.la_note_enchantée h3 {
   font-family: "Segoe Print";
 }
 
@@ -245,15 +251,12 @@ table {
   background-color: #fcdfdb;
 }
 
-.le_chic .line {
-  width: 55.5%;
-}
-
 .le_chic .menu {
   background-color: #fff5fe;
 }
 
-.le_chic table, .le_chic h3 {
+.le_chic table,
+.le_chic h3 {
   font-family: "Arial", cursive, serif;
   font-size: 15px;
 }
@@ -270,12 +273,48 @@ table {
   color: #c77412;
 }
 
+.le_chic .entrée .underline {
+  background: -webkit-gradient(linear, left bottom, left top, from(#c77412), color-stop(5%, #c77412), color-stop(5.01%, transparent)) no-repeat;
+  background: linear-gradient(to top, #c77412 0%, #c77412 5%, transparent 5.01%) no-repeat;
+  background-size: 0 100%;
+  -webkit-transition: background-size 300ms;
+  transition: background-size 300ms;
+}
+
+.le_chic .entrée .underline:hover {
+  background-size: 100% 100%;
+}
+
 .le_chic .plat {
   color: #a56799;
 }
 
+.le_chic .plat .underline {
+  background: -webkit-gradient(linear, left bottom, left top, from(#a56799), color-stop(5%, #a56799), color-stop(5.01%, transparent)) no-repeat;
+  background: linear-gradient(to top, #a56799 0%, #a56799 5%, transparent 5.01%) no-repeat;
+  background-size: 0 100%;
+  -webkit-transition: background-size 300ms;
+  transition: background-size 300ms;
+}
+
+.le_chic .plat .underline:hover {
+  background-size: 100% 100%;
+}
+
 .le_chic .dessert {
   color: #6e4ccc;
+}
+
+.le_chic .dessert .underline {
+  background: -webkit-gradient(linear, left bottom, left top, from(#6e4ccc), color-stop(5%, #6e4ccc), color-stop(5.01%, transparent)) no-repeat;
+  background: linear-gradient(to top, #6e4ccc 0%, #6e4ccc 5%, transparent 5.01%) no-repeat;
+  background-size: 0 100%;
+  -webkit-transition: background-size 300ms;
+  transition: background-size 300ms;
+}
+
+.le_chic .dessert .underline:hover {
+  background-size: 100% 100%;
 }
 
 .le_délice .menu {
@@ -287,10 +326,11 @@ table {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'IM Fell Double Pica', serif;
+  font-family: "IM Fell Double Pica", serif;
 }
 
-.le_délice table, .le_délice h3 {
+.le_délice table,
+.le_délice h3 {
   font-family: "Segoe Print", cursive;
 }
 
@@ -303,18 +343,33 @@ table {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
 }
 
-.la_palette table, .la_palette h3 {
+.la_palette table,
+.la_palette h3 {
   font-family: "Segoe Print", cursive, sans-serif;
 }
 
-body {
-  margin: auto;
+@media all and (max-width: 1024px) {
+  .menu {
+    width: 450px;
+  }
 }
 
-header, footer, .prochainement {
+@media all and (max-width: 540px) {
+  .menu {
+    width: 450px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+header,
+footer,
+.prochainement {
   background-color: #579c87;
   color: #fdcb46;
   font-family: "Montserrat";
@@ -344,12 +399,6 @@ footer {
   right: 0;
 }
 
-header {
-  left: 0;
-  top: 0;
-  right: 0;
-}
-
 .mention {
   padding-left: 15px;
   padding-top: 5px;
@@ -360,7 +409,8 @@ header {
   padding-top: 5px;
 }
 
-.Contact:hover, .mention:hover {
+.Contact:hover,
+.mention:hover {
   -webkit-animation-name: wiggle;
           animation-name: wiggle;
   -webkit-animation-duration: 500ms;
@@ -373,6 +423,7 @@ header {
   font-size: 50px;
   height: 100px;
   padding-top: 20px;
+  margin: 0;
 }
 
 .menus {
@@ -407,9 +458,11 @@ article {
 }
 
 article.menu1 {
-  grid-area: "menu1";
-  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: menu1;
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: black;
   background-color: #fcdfdb;
   font-family: "Segoe Script", cursive;
@@ -430,9 +483,11 @@ article.menu1 p {
 }
 
 article.menu2 {
-  grid-area: "menu2";
-  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: menu2;
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #c77412;
   background-color: #fff5fe;
   font-weight: bold;
@@ -448,14 +503,16 @@ article.menu2 h1 {
 }
 
 article.menu3 {
-  grid-area: "menu3";
-  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: menu3;
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #0887fb;
   background-color: #f9f9f9;
   font-weight: bold;
   font-size: 30px;
-  font-family: 'IM Fell Double Pica', serif;
+  font-family: "IM Fell Double Pica", serif;
 }
 
 article.menu3 p {
@@ -470,14 +527,16 @@ article.menu3 h1 {
 }
 
 article.menu4 {
-  grid-area: "menu4";
-  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
-          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: menu4;
+  -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #72bf56;
   background-color: #fdfffd;
   font-weight: bold;
   font-size: 30px;
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
 }
 
 article.menu4 p {
@@ -491,7 +550,9 @@ article.menu4 h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.premier, .deuxieme, .troisieme {
+.premier,
+.deuxieme,
+.troisieme {
   opacity: 0;
 }
 
@@ -506,7 +567,9 @@ article.menu4 h1 {
   margin-bottom: 100px;
 }
 
-.prochainement .premier, .prochainement .deuxieme, .prochainement .troisieme {
+.prochainement .premier,
+.prochainement .deuxieme,
+.prochainement .troisieme {
   -webkit-animation-name: suspension;
           animation-name: suspension;
   -webkit-animation-duration: 1.4s;
@@ -518,13 +581,13 @@ article.menu4 h1 {
 }
 
 .prochainement .deuxieme {
-  -webkit-animation-delay: .2s;
-          animation-delay: .2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .prochainement .troisieme {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .zoom {
@@ -540,7 +603,7 @@ article.menu4 h1 {
 .zoom:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  opacity: 0.50;
+  opacity: 0.5;
 }
 
 @media all and (max-width: 1024px) {
@@ -549,7 +612,19 @@ article.menu4 h1 {
     display: grid;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
-        grid-template-areas: "menu1"  "menu2" "menu3" "menu4";
+        grid-template-areas: "menu1" "menu2" "menu3" "menu4";
+  }
+}
+
+@media all and (max-width: 540px) {
+  article {
+    max-width: 400px;
+  }
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

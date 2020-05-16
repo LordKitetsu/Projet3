@@ -1,23 +1,19 @@
-body {
-    margin: auto;
-    max-width: 1440px;
-}
-
-.menu {        
+.menu {
     @include box-shadow-menu;
-    max-width: 720px;
+    max-width: 500px;
     margin: auto;
     margin-bottom: 50px;
-
+    padding-top: 25px;
 }
 
-
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
-    }
+}
 
-table, h3 {
+table,
+h3 {
     margin: auto;
     font-size: 10px;
     padding-left: 5%;
@@ -25,7 +21,6 @@ table, h3 {
     justify-content: center;
     width: 550px;
     margin-bottom: 20px;
-        
 }
 
 h2 {
@@ -48,48 +43,49 @@ table {
 
 .divider {
     display: flex;
-    
+
     &:before,
     &:after {
-      content: "";
-      flex: 1;
+        content: "";
+        flex: 1;
     }
-  }
+}
 
 .line {
     align-items: center;
     margin: auto;
-    width: 54.5%;
-    
+    width: auto;
+
     &:before,
     &:after {
-      height: 1px;
-      margin: 0 1em;
+        height: 1px;
+        margin: 0 1em;
     }
-  }
-  
-  
-    .one-line {
-      &:before,
-      &:after {
+}
+
+.one-line {
+    &:before,
+    &:after {
         background: black;
-      }
     }
+}
 
 .underline {
     @include underline(black);
 }
 
 .la_note_enchantée {
-    
     h2 {
-    font-family: "Segoe Script", cursive;
+        font-family: "Segoe Script", cursive;
+        margin-top: 5px;
     }
 
     .bas {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+        padding-bottom: 25px;
     }
 
     .logo1 {
@@ -103,26 +99,26 @@ table {
         width: 75px;
         height: 75px;
         justify-content: center;
+        margin-bottom: auto;
     }
 
-    table, h3 {
-        font-family: "Segoe Print";        
+    table,
+    h3 {
+        font-family: "Segoe Print";
     }
 
     .menu {
-        background-color: $menu1-background-color;        
+        background-color: $menu1-background-color;
     }
 }
 
 .le_chic {
-    .line {
-        width: 55.5%;
-    }
     .menu {
         background-color: $menu2-background-color;
     }
 
-    table, h3 {
+    table,
+    h3 {
         font-family: "Arial", cursive, serif;
         font-size: 15px;
     }
@@ -131,15 +127,25 @@ table {
         font-family: "Arial", sans-serif;
         @include dégradé-menu2;
     }
-    
+
     .entrée {
         color: $entree-menu2-color;
+        .underline {
+            @include underline($entree-menu2-color);
+        }
     }
     .plat {
         color: $plat-menu2-color;
+        .underline {
+            @include underline($plat-menu2-color);
+        }
     }
     .dessert {
         color: $dessert-menu2-color;
+
+        .underline {
+            @include underline($dessert-menu2-color);
+        }
     }
 }
 
@@ -150,13 +156,13 @@ table {
 
     h2 {
         @include dégradé-menu3;
-        font-family: 'IM Fell Double Pica', serif;
+        font-family: "IM Fell Double Pica", serif;
     }
 
-    table, h3 {
+    table,
+    h3 {
         font-family: "Segoe Print", cursive;
     }
-    
 }
 
 .la_palette {
@@ -166,10 +172,23 @@ table {
 
     h2 {
         @include dégradé-menu4;
-        font-family: 'Courgette', cursive;
+        font-family: "Courgette", cursive;
     }
 
-    table, h3 {
+    table,
+    h3 {
         font-family: "Segoe Print", cursive, sans-serif;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .menu {
+        width: 450px;
+    }
+}
+
+@media all and (max-width: 540px) {
+    .menu {
+        width: 450px;
     }
 }
