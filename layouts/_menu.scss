@@ -4,6 +4,8 @@
     margin: auto;
     margin-bottom: 50px;
     padding-top: 25px;
+    max-height: 650px;
+    padding-bottom: 50px;
 }
 
 h1,
@@ -109,12 +111,14 @@ table {
 
     .menu {
         background-color: $menu1-background-color;
+        max-height: none;
     }
 }
 
 .le_chic {
     .menu {
         background-color: $menu2-background-color;
+        max-height: none;
     }
 
     table,
@@ -152,6 +156,7 @@ table {
 .le_délice {
     .menu {
         background-color: $menu3-background-color;
+        max-height: none;
     }
 
     h2 {
@@ -168,6 +173,7 @@ table {
 .la_palette {
     .menu {
         background-color: $menu4-background-color;
+        max-height: none;
     }
 
     h2 {
@@ -189,6 +195,12 @@ table {
 
 @media all and (max-width: 540px) {
     .menu {
-        width: 450px;
+        width: 350px;
+    }
+    table {
+        width: 250px;
+    }
+    td {
+        max-width: 50px;
     }
 }

@@ -32,16 +32,15 @@ footer {
 
 .mention {
     padding-left: 15px;
-    padding-top: 5px;
 }
 
 .Contact {
     padding-right: 15px;
-    padding-top: 5px;
 }
 
 .Contact,
 .mention {
+    padding-top: 5px;
     &:hover {
         animation-name: wiggle;
         animation-duration: 500ms;
@@ -198,13 +197,21 @@ article {
 
 @media all and (max-width: 540px) {
     article {
-        max-width: 400px;
+        max-width: 300px;
+        height: 400px;
     }
     footer {
         position: fixed;
         left: 0;
         bottom: 0;
         right: 0;
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 23px;
+    }
+    .prochainement {
+        width: 275px;
     }
     
 }
