@@ -119,7 +119,7 @@
 .menu {
   -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
   margin-bottom: 50px;
   padding-top: 25px;
@@ -200,10 +200,15 @@ table {
   background-size: 0 100%;
   -webkit-transition: background-size 300ms;
   transition: background-size 300ms;
+  font-size: 20px;
 }
 
 .underline:hover {
   background-size: 100% 100%;
+}
+
+td {
+  font-size: 16px;
 }
 
 .la_note_enchantée h2 {
@@ -361,17 +366,26 @@ table {
   .menu {
     width: 450px;
   }
+  td {
+    font-size: 14px;
+  }
+  .underline {
+    font-size: 18px;
+  }
 }
 
 @media all and (max-width: 540px) {
   .menu {
     width: 350px;
   }
-  table {
-    width: 250px;
-  }
   td {
-    max-width: 50px;
+    font-size: 12px;
+  }
+  .underline {
+    font-size: 16px;
+  }
+  table {
+    width: 100%;
   }
 }
 
@@ -444,8 +458,12 @@ header {
 .menus {
   display: -ms-grid;
   display: grid;
+  margin-left: 200px;
+  margin-right: 200px;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
       grid-template-areas: "menu1 menu2" "menu3 menu4";
 }
 
@@ -613,6 +631,10 @@ article.menu4 h1 {
   transition: -webkit-transform 400ms;
   transition: transform 400ms;
   transition: transform 400ms, -webkit-transform 400ms;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
 }
 
 .zoom:hover {
@@ -623,6 +645,7 @@ article.menu4 h1 {
 
 @media all and (max-width: 1024px) {
   .menus {
+    margin: auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;

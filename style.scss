@@ -58,7 +58,10 @@ header {
 
 .menus {
     display: grid;
+    margin-left: 200px;
+    margin-right: 200px;
     grid-template-columns: auto;
+    column-gap: 50px;
     grid-template-areas:
         "menu1 menu2"
         "menu3 menu4";
@@ -177,6 +180,7 @@ article {
     opacity: 1;
     transform: scale(1);
     transition: transform 400ms;
+    transition-property: opacity, transform;
     &:hover {
         transform: scale(1.2);
         opacity: 0.5;
@@ -185,6 +189,7 @@ article {
 
 @media all and (max-width: 1024px) {
     .menus {
+        margin: auto;
         display: grid;
         grid-template-columns: auto;
         grid-template-areas:

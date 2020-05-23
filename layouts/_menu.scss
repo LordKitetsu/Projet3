@@ -1,6 +1,6 @@
 .menu {
     @include box-shadow-menu;
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
     margin-bottom: 50px;
     padding-top: 25px;
@@ -74,6 +74,11 @@ table {
 
 .underline {
     @include underline(black);
+    font-size: 20px;
+}
+
+td {
+    font-size: 16px;;
 }
 
 .la_note_enchantée {
@@ -191,16 +196,27 @@ table {
     .menu {
         width: 450px;
     }
+    td {
+        font-size: 14px;
+    }
+    .underline {
+        font-size: 18px;
+    }
 }
 
 @media all and (max-width: 540px) {
     .menu {
         width: 350px;
     }
-    table {
-        width: 250px;
-    }
     td {
-        max-width: 50px;
+        font-size: 12px;
     }
+    .underline {
+        font-size: 16px;
+    }
+    
+    table {
+        width: 100%;
+    }
+    
 }
