@@ -200,7 +200,7 @@ table {
   background-size: 0 100%;
   -webkit-transition: background-size 300ms;
   transition: background-size 300ms;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .underline:hover {
@@ -208,7 +208,7 @@ table {
 }
 
 td {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .courses {
