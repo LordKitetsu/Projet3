@@ -365,7 +365,7 @@ table {
 }
 
 .le_délice .separateur {
-  max-width: 20%;
+  max-width: 15%;
 }
 
 .la_palette .menu {
@@ -387,7 +387,7 @@ table {
 }
 
 .la_palette .separateur {
-  max-width: 20%;
+  max-width: 15%;
 }
 
 @media all and (max-width: 1024px) {
