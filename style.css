@@ -367,6 +367,10 @@ h3 {
   font-family: "Segoe Print", cursive;
 }
 
+.le_délice .separateur {
+  max-width: 18%;
+}
+
 .la_palette .menu {
   background-color: #fdfffd;
   max-height: none;
@@ -383,6 +387,10 @@ h3 {
 .la_palette table,
 .la_palette h3 {
   font-family: "Segoe Print", cursive, sans-serif;
+}
+
+.la_palette .separateur {
+  max-width: 18%;
 }
 
 @media all and (max-width: 1024px) {
