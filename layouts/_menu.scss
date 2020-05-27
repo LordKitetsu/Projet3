@@ -14,13 +14,13 @@ h3 {
     text-align: center;
 }
 
-table, h3 {
+table {
     margin: auto;
     font-size: 10px;
     padding-left: 5%;
     padding-right: 5%;
     justify-content: center;
-    width: 550px;
+    width: 450px;
     margin-bottom: 20px;
 }
 
@@ -33,11 +33,6 @@ td {
     padding-bottom: 5px;
     font-size: 15px;
 }
-
-table {
-    width: 450px;
-}
-
 .prix {
     font-weight: bold;
     text-align: right;
@@ -83,14 +78,23 @@ table {
 .courses {
     display: flex;
     flex-direction: row;
+    padding-bottom: 20px;
 }
 
 .separateur {
-    max-width: 20%;
-    padding-bottom: 20px;
+    max-width: 20%;    
     padding-left: 20px;
     padding-right: 20px;
     flex: 0 0 25%;
+}
+
+h3 {
+    flex: 0 0 30%;
+    font-size: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+    width: 550px;
 }
 
 .la_note_enchantée {
