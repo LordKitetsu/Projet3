@@ -186,7 +186,7 @@ table {
 }
 
 .line:before, .line:after {
-  height: 1px;
+  height: 5px;
   margin: 0 1em;
 }
 
@@ -200,7 +200,7 @@ table {
   background-size: 0 100%;
   -webkit-transition: background-size 300ms;
   transition: background-size 300ms;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .underline:hover {
@@ -209,6 +209,23 @@ table {
 
 td {
   font-size: 16px;
+}
+
+.courses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: space-between;
+          flex-direction: space-between;
+}
+
+.separateur {
+  width: 65%;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .la_note_enchantée h2 {
@@ -267,7 +284,6 @@ td {
 .le_chic table,
 .le_chic h3 {
   font-family: "Arial", cursive, serif;
-  font-size: 15px;
 }
 
 .le_chic h2 {
@@ -327,7 +343,7 @@ td {
 }
 
 .le_délice .menu {
-  background-color: #f9f9f9;
+  background-color: #edefef;
   max-height: none;
 }
 
@@ -370,7 +386,7 @@ td {
     font-size: 14px;
   }
   .underline {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -379,10 +395,10 @@ td {
     width: 350px;
   }
   td {
-    font-size: 12px;
+    font-size: 11px;
   }
   .underline {
-    font-size: 16px;
+    font-size: 11px;
   }
   table {
     width: 100%;
@@ -542,7 +558,7 @@ article.menu3 {
   -webkit-box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey, -6px -6px 6px lightgrey;
   color: #0887fb;
-  background-color: #f9f9f9;
+  background-color: #edefef;
   font-weight: bold;
   font-size: 30px;
   font-family: "IM Fell Double Pica", serif;
