@@ -368,7 +368,7 @@ h3 {
 }
 
 .le_délice .separateur {
-  max-width: 18%;
+  max-width: 15%;
 }
 
 .la_palette .menu {
@@ -390,7 +390,7 @@ h3 {
 }
 
 .la_palette .separateur {
-  max-width: 18%;
+  max-width: 15%;
 }
 
 @media all and (max-width: 1024px) {
